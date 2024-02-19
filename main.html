@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="me.png">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+    <title>Borno's portfolio</title>
+      
+</head>
+<body>
+    <header class="header">
+        <div class="navigation">
+            <ul>
+                <li class="list active">
+                    <a href="#home">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="text"></span>
+                        <span class="circle"></span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#about">
+                        <span class="icon">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </span>
+                        <span class="text"></span>
+                        <span class="circle"></span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#services">
+                        <span class="icon">
+                            <ion-icon name="code-working-outline"></ion-icon>
+                        </span>
+                        <span class="text"></span>
+                        <span class="circle"></span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#contacts">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                        </span>
+                        <span class="text"></span>
+                        <span class="circle"></span>
+                    </a>
+                </li>
+               
+                <div class="indicator"></div>
+            </ul>
+        </div>
+    </header>
+    
+    <section id="home">
+      
+        <p class="text">It's <span class="purple-text">Borno</span></p>
+        <img src="me.png" alt="Description of the image" class="image">
+        <h1>I'm a <span id="typing-text"></span></h1>
+        <div class="hudai">
+            
+            <p>Need a modern, responsive website that will take your business to the next level? Hire me to make it happen</p></div>
+            <div class="icons">
+                <i class='bx bxl-facebook-circle'></i>
+                <i class='bx bxl-instagram'></i>
+                <i class='bx bxl-discord-alt'></i>
+                <i class='bx bxl-github'></i>
+            </div>
+            <b href="#">Hire Me</b>
+      
+        
+    </section>
+    
+
+    <section id="about">
+
+        <div class="container">
+            <div class="wrapper">
+               <a href="#">
+               <img src="me.png" alt="">
+               </a>
+               <div class="title">
+                  I'm Borno from Dhaka, Bangladesh
+               </div>
+            <div class="content">
+               <p>
+                  i'm a full stack web dev .i learnt programming during lockdown and self taught myself that's why i don't have any certificate but i'm well experienced in this sector. Python is my first language that's why I have another level of confidence on it! &lt;3
+               </p>
+               
+            </div>
+            <div class="icons">
+               <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+               <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+               <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+            </div>
+         </div>
+         <script>
+            const img = document.querySelector("img");
+            const icons = document.querySelector(".icons");
+            img.onclick = function(){
+              this.classList.toggle("active");
+              icons.classList.toggle("active");
+            }
+         </script>
+
+    </section>
+
+    <section id="services">
+        
+        <div class="card-container">
+            <div class="skills">
+              <ul>
+                <li class="html">HTML & CSS</li>
+                <div class="bar"><span class="html"></span></div>
+        
+                <li class="css">JavaScript</li>
+                <div class="bar"><span class="css"></span></div>
+        
+                <li class="javascript">C/C++</li>
+                <div class="bar"><span class="javascript"></span></div>
+        
+                <li class="jquery">Python</li>
+                <div class="bar"><span class="jquery"></span></div>
+              </ul>
+            </div>
+          </div>
+
+          <h4 class="headline">services</h4>
+
+          <div class="ag-format-container">
+            <div class="ag-courses_box">
+              <div class="ag-courses_item">
+                <a href="#" class="ag-courses-item_link">
+                  <div class="ag-courses-item_bg"></div>
+          
+                  <div class="ag-courses-item_title">
+                    Web-Development + Design
+                  </div>
+          
+                  <div class="ag-courses-item_date-box">
+                    Front-end and backend both
+                    <span class="ag-courses-item_date">
+                      
+                    </span>
+                  </div>
+                </a>
+              </div>
+          
+              <div class="ag-courses_item">
+                <a href="#" class="ag-courses-item_link">
+                  <div class="ag-courses-item_bg"></div>
+          
+                  <div class="ag-courses-item_title">
+                    Web-Development
+                  </div>
+          
+                  <div class="ag-courses-item_date-box">
+                    Front-end
+                    <span class="ag-courses-item_date">
+                     
+                    </span>
+                  </div>
+                </a>
+              </div>
+          
+              <div class="ag-courses_item">
+                <a href="#" class="ag-courses-item_link">
+                  <div class="ag-courses-item_bg"></div>
+          
+                  <div class="ag-courses-item_title">
+                    Web-Development
+                  </div>
+          
+                  <div class="ag-courses-item_date-box">
+                   Back-end
+                    <span class="ag-courses-item_date">
+                      
+                    </span>
+                  </div>
+                </a>
+              </div>
+          
+              <div class="ag-courses_item">
+                <a href="#" class="ag-courses-item_link">
+                  <div class="ag-courses-item_bg"></div>
+          
+                  <div class="ag-courses-item_title">
+                    Python projects
+                  </div>
+          
+                  <div class="ag-courses-item_date-box">
+                    everything (From A-Z)
+                    <span class="ag-courses-item_date">
+                      
+                    </span>
+                  </div>
+                </a>
+              </div>
+          
+              <div class="ag-courses_item">
+                <a href="#" class="ag-courses-item_link">
+                  <div class="ag-courses-item_bg"></div>
+          
+                  <div class="ag-courses-item_title">
+                    Any other project scripting
+                  </div>
+          
+                  <div class="ag-courses-item_date-box">
+                    only be: JavaScript, HTML/CSS, C/C++, 
+                    <span class="ag-courses-item_date">
+                      
+                    </span>
+                  </div>
+                </a>
+              </div>
+          
+              <div class="ag-courses_item">
+                <a href="#" class="ag-courses-item_link">
+                  <div class="ag-courses-item_bg"></div>
+          
+                  <div class="ag-courses-item_title">
+                    Mobile App development (with UI design)
+                  </div>
+                </a>
+              </div>
+          
+              <div class="ag-courses_item">
+                <a href="#" class="ag-courses-item_link">
+                  <div class="ag-courses-item_bg">
+                  </div>
+                  <div class="ag-courses-item_title">
+                    Arduino code writing
+                  </div>
+                </a>
+              </div>
+          
+              <div class="ag-courses_item">
+                <a href="#" class="ag-courses-item_link">
+                  <div class="ag-courses-item_bg"></div>
+          
+                  <div class="ag-courses-item_title">
+                     Code bug fixing
+                  </div>
+          
+                  <div class="ag-courses-item_date-box">
+                    
+                    <span class="ag-courses-item_date">
+                      
+                    </span>
+                  </div>
+                </a>
+              </div>
+          
+            </div>
+          </div>
+    </section>
+    <section id="contacts">
+        <h5 class="hedaline">Contact Me</h6>
+        <div class = "frame">
+            <div id = "button_open_envelope">
+                    Email me
+                  </div>
+                  <div class = "message">
+                    <form method="post" action="">
+                      <input type="text" name="name" id="name" placeholder=" Name* " required>
+                  
+                      <input type="email" name="email" id="email" placeholder=" Email* " required pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$">
+                    
+                      <input type="text" name="phone" id="phone" placeholder=" Phone (optional)" autofocus> 
+                    
+                      <textarea name="message" id="messarea" placeholder=" Message* " required></textarea>
+                  
+                      <input type="text" name="address" id="address" style="display: none;">
+                      <input type="submit" value="Send" id="send">
+                    </form>
+                  </div>
+                  <div class = "bottom"></div>      
+                  <div class = "left"></div>
+                  <div class = "right"></div>
+                  <div class = "top"></div>
+                  <script src="js/script.js"></script>
+
+                </div>
+                <div class="icon-container">
+                    <i class='bx bxl-facebook-circle'></i>
+                    <i class='bx bxl-instagram'></i>
+                    <i class='bx bxl-discord-alt'></i>
+                    <i class='bx bxl-github'></i>
+                </div>
+    </section>
+    <script>
+      // JavaScript to scroll to the home section when the page loads
+      window.onload = function() {
+          var homeSection = document.getElementById('home');
+          if (homeSection) {
+              homeSection.scrollIntoView({ behavior: 'smooth' });
+          }
+      };
+  </script>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
