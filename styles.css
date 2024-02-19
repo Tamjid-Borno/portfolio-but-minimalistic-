@@ -23,127 +23,127 @@ header {
 
 
 .navigation {
-    position: fixed;
-    width: 100%;
-    height: 8%;
-    background: linear-gradient(45deg, rgb(0, 43, 43), purple);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    z-index: 1000;
+  position: fixed;
+  width: 100%;
+  height: 5rem;
+  background: linear-gradient(45deg, rgb(0, 43, 43), purple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  z-index: 1000;
 }
 .navigation ul {
-    display: flex;
-    width: 350px;
+  display: flex;
+  width: 350px;
 }
 .navigation ul li {
-    position: relative;
-    width: 70px;
-    height: 70px;
-    list-style: none;
-    z-index: 1;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  list-style: none;
+  z-index: 1;
 }
 .navigation ul li a {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    font-weight: 500;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
 }
 .navigation ul li a .icon {
-    position: relative;
-    display: block;
-    line-height: 75px;
-    font-size: 1.5em;
-    text-align: center;
-    color: #fff;
-    transition: .5s;
+  position: relative;
+  display: block;
+  line-height: 4.6875rem;
+  font-size: 1.5em;
+  text-align: center;
+  color: #fff;
+  transition: .5s;
 }
 .navigation ul li.active a .icon {
-    transform: translateY(7vh) translateX(0.3125rem); /* Change from translateY(-32px) */
+  transform: translateY(7vh) translateX(0.3125rem); /* Change from translateY(-32px) */
 }
 .navigation ul li a .text {
-    position: absolute;
-    color: #fff;
-    font-weight: 400;
-    font-size: .75em;
-    letter-spacing: .05em;
-    opacity: 0;
-    transform: translateY(45px);
-    transition: .5s;
+  position: absolute;
+  color: #fff;
+  font-weight: 400;
+  font-size: .75em;
+  letter-spacing: .05em;
+  opacity: 0;
+  transform: translateY(2.8125rem);
+  transition: .5s;
 }
 .navigation ul li.active a .text {
-    opacity: 1;
-    transform: translateY(-30px); /* Change from translateY(10px) */
+  opacity: 1;
+  transform: translateY(-30px); /* Change from translateY(10px) */
 }
 .navigation ul li a .circle {
-    position: absolute;
-    display: block;
-    width: 50px;
-    height: 50px;
-    background: transparent;
-    border-radius: 50%;
-    border: 1.8px solid #fff;
-    transform: translateY(-20px) scale(0);
+  position: absolute;
+  display: block;
+  width: 3.125rem;
+  height: 3.125rem;
+  background: transparent;
+  border-radius: 50%;
+  border: 1.8px solid #fff;
+  transform: translateY(-20px) scale(0);
 }
 
 .indicator {
-    position: absolute;
-    bottom: -100%; /* Change from top to bottom */
-    width: 70px;
-    height: 70px;
-    background: linear-gradient(45deg, cyan, purple);
-    border: 6px solid var(--background-color);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: .5s;
+  position: absolute;
+  bottom: -6vh; /* Responsive unit relative to viewport height */
+  width: 4.375rem;
+  height: 4.375rem;
+  background: linear-gradient(45deg, cyan, purple);
+  border: 6px solid var(--background-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
 }
 
 .indicator::before {
-    content: '';
-    position: absolute;
-    bottom: 50%; /* Change from top to bottom */
-    left: -24px;
-    width: 23px;
-    height: 23px;
-    background: transparent;
-    border-bottom-right-radius: 20px; /* Change from top to bottom */
-    box-shadow: 1px 10px 0 transparent; /* Change to positive value */
+  content: '';
+  position: absolute;
+  bottom: 20rem; /* Change from top to bottom */
+  left: -1.5rem;
+  width: 1.4375rem;
+  height: 1.4375rem;
+  background: transparent;
+  border-bottom-right-radius: 20px; /* Change from top to bottom */
+  box-shadow: 1px 10px 0 transparent; /* Change to positive value */
 }
 
 .indicator::after {
-    content: '';
-    position: absolute;
-    bottom: 50%; /* Change from top to bottom */
-    right: -27px;
-    width: 23px;
-    height: 23px;
-    background: transparent;
-    border-bottom-left-radius: 20px; /* Change from top to bottom */
-    box-shadow: -1px 10px 0 transparent; /* Change to positive value */
+  content: '';
+  position: absolute;
+  bottom: 20rem; /* Change from top to bottom */
+  right: -27px;
+  width: 23px;
+  height: 23px;
+  background: transparent;
+  border-bottom-left-radius: 20px; /* Change from top to bottom */
+  box-shadow: -1px 10px 0 transparent; /* Change to positive value */
 }
 
 
 .navigation ul li:nth-child(1).active~.indicator {
-    transform: translateX(calc(70px * 0));
+  transform: translateX(calc(70px * 0));
 }
 .navigation ul li:nth-child(2).active~.indicator {
-    transform: translateX(calc(70px * 1));
+  transform: translateX(calc(70px * 1));
 }
 .navigation ul li:nth-child(3).active~.indicator {
-    transform: translateX(calc(70px * 2));
+  transform: translateX(calc(70px * 2));
 }
 .navigation ul li:nth-child(4).active~.indicator {
-    transform: translateX(calc(70px * 3));
+  transform: translateX(calc(70px * 3));
 }
 .navigation ul li:nth-child(5).active~.indicator {
-    transform: translateX(calc(70px * 4));
+  transform: translateX(calc(70px * 4));
 }
 
 
@@ -217,7 +217,7 @@ img:hover {
   left: 50%; /* Position the text horizontally at the center */
   transform: translate(-50%, -50%); /* Center the text using translate */
   text-align: center; /* Center align the text */
-  font-size: 4vw; /* Adjust font size using viewport width */
+  font-size: 9vh;
 }
 
 .purple-text {
@@ -288,12 +288,14 @@ img:hover {
   top: 75%; /* Position the icons under the h1 */
   left: 50%; /* Center the icons horizontally */
   transform: translateX(-50%); /* Center the icons horizontally */
+  border-radius: 50%;
 }
 
 .icons i {
   font-size: 4vw; /* Adjust icon size using viewport width */
   color: purple;
-  margin: 0 0.5vw; /* Adjust margin for spacing between icons using viewport width */
+  margin: 0 0.5vw;
+  border-radius:50%; /* Adjust margin for spacing between icons using viewport width */
 }
 
 .icons i:hover {
