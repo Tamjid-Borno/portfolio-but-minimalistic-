@@ -64,7 +64,7 @@ header {
     transition: .5s;
 }
 .navigation ul li.active a .icon {
-    transform: translateY(8vh); /* Change from translateY(-32px) */
+    transform: translateY(7vh) translateX(0.3125rem); /* Change from translateY(-32px) */
 }
 .navigation ul li a .text {
     position: absolute;
@@ -73,7 +73,7 @@ header {
     font-size: .75em;
     letter-spacing: .05em;
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(45px);
     transition: .5s;
 }
 .navigation ul li.active a .text {
@@ -109,9 +109,9 @@ header {
     content: '';
     position: absolute;
     bottom: 50%; /* Change from top to bottom */
-    left: -22px;
-    width: 20px;
-    height: 20px;
+    left: -24px;
+    width: 23px;
+    height: 23px;
     background: transparent;
     border-bottom-right-radius: 20px; /* Change from top to bottom */
     box-shadow: 1px 10px 0 transparent; /* Change to positive value */
@@ -121,9 +121,9 @@ header {
     content: '';
     position: absolute;
     bottom: 50%; /* Change from top to bottom */
-    right: -22px;
-    width: 20px;
-    height: 20px;
+    right: -27px;
+    width: 23px;
+    height: 23px;
     background: transparent;
     border-bottom-left-radius: 20px; /* Change from top to bottom */
     box-shadow: -1px 10px 0 transparent; /* Change to positive value */
@@ -157,28 +157,46 @@ section {
 }
 
 #home {
-    background-color:var(--background-color); /* Adjust the path to your image */
-    background-size: cover;
-    background-position: center;
-    color: cyan;
-    text-align: left;
-    padding: 50px;
-    position: relative;
+  background-color: var(--background-color); /* Adjust the path to your image */
+  background-size: cover;
+  background-position: center;
+  color: cyan;
+  text-align: left;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+}
+.home {
+  opacity: 0;
+  transform: translateY(100px); /* Initial position off-screen */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Apply transition for opacity and transform */
 }
 
+.home.animate {
+  opacity: 1;
+  transform: translateY(0); /* Final position */
+}
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .image {
-    width: 18vw; /* Adjust the width of the image */
-    height: 38vh; /* Maintain the aspect ratio */
-    margin-top: 2rem; /* Adjust the top margin of the image */
-    margin-left: auto; /* Align the image to the center horizontally */
-    margin-right: auto;
-    display: block; /* Center the image */
-    border-radius: 50%;
-    transition: box-shadow 0.3s ease; /* Smooth transition for box shadow */
-    position: absolute;
-    top: 12vh;
-    left: 42vw;
+  width: 30%; /* Adjust width percentage for responsiveness */
+  max-width: 300px; /* Set max-width to maintain image quality */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease;
+  position: absolute;
+  top: 30%; /* 20% from the top of the parent container */
+  left: 50%; /* 50% from the left of the parent container */
+  transform: translate(-50%, -50%); /* Center horizontally and vertically */
 }
 
 img:hover {
@@ -193,21 +211,18 @@ img:hover {
     }
 }
 
-/* Text section */
 .text {
-    text-align: center; /* Center-align the text */
-    margin-top: 1rem; /* Adjust top margin for spacing */
-    position: absolute; /* Set position to absolute for positioning */
-    bottom: 37%; /* Adjust the bottom position as a percentage of the image height */
-    left: 50%; /* Center the text horizontally */
-    transform: translateX(-50%); /* Center the text horizontally */
-    font-size: 4rem; /* Adjust font size as a percentage of viewport width */
+  position: absolute; /* Change position to absolute for custom positioning */
+  top: 53%; /* Position the text vertically at the center */
+  left: 50%; /* Position the text horizontally at the center */
+  transform: translate(-50%, -50%); /* Center the text using translate */
+  text-align: center; /* Center align the text */
+  font-size: 4vw; /* Adjust font size using viewport width */
 }
 
-/* Purple text */
 .purple-text {
-    color: purple; /* Purple color for the text */
-    font-weight: bold; /* Make the text bold */
+  color: purple; /* Purple color for the text */
+  font-weight: bold; /* Make the text bold */
 }
 
 /* Adjustments for smaller screens */
@@ -218,35 +233,36 @@ img:hover {
     }
 }
 
-
 #home h1 {
-    font-size: 2.88rem; /* Adjust the font size as needed */
-    position: absolute; /* Position the element absolutely */
-    bottom: 35%; /* Adjust the top position as needed */
-    left: 40%; /* Adjust the left position as needed */
-    color:cyan;
+  font-size: 2.88vw; /* Adjust font size using viewport width */
+  position: absolute; /* Change position to absolute for custom positioning */
+  top: 63%; /* Position the text vertically at the center */
+  left: 50%; /* Position the text horizontally at the center */
+  transform: translate(-50%, -50%); /* Center the text using translate */
+  text-align: center; /* Center align the text */
 }
+
 .hudai {
-    width: 100%;
-    max-width: 600px; /* Adjust max-width as needed */
-    margin: 0 auto; /* Center the div horizontally */
-    position: relative; /* Set position to relative to allow for absolute positioning of children */
-    padding-bottom: 30px; /* Adjust padding-bottom for spacing */
+  width: 100%;
+  max-width: 600px; /* Adjust max-width as needed */
+  margin: 0 auto; /* Center the div horizontally */
+  position: relative; /* Set position to relative to allow for absolute positioning of children */
+  padding-bottom: 30px; /* Adjust padding-bottom for spacing */
 }
 
 .hudai p {
-    font-size: 1.5rem; /* Adjust font size as needed */
-    position: absolute; /* Set position to absolute */
-    top: 10rem; /* Position the text 10px from the bottom */
-    left: 50%; /* Position the text 50% from the left */
-    transform: translateX(-50%); /* Center the text horizontally */
-    white-space: nowrap; /* Prevent text from wrapping to multiple lines */
-    overflow: hidden; /* Hide any overflowing text */
-    text-overflow: ellipsis; /* Display ellipsis (...) for any overflowing text */
-    background: linear-gradient(to right, cyan, purple); /* Apply linear gradient to the text */
-    -webkit-background-clip: text; /* Apply the gradient only to the text */
-    background-clip: text; /* Apply the gradient only to the text */
-    color: transparent; /* Make the text transparent */
+  font-size: 1.2rem; /* Adjust font size as needed */
+  position: absolute; /* Set position to absolute */
+  top: 27vh; /* Position the text 53% from the top */
+  left: 50%; /* Position the text 50% from the left */
+  transform: translateX(-50%); /* Center the text horizontally */
+  white-space: nowrap; /* Prevent text from wrapping to multiple lines */
+  overflow: hidden; /* Hide any overflowing text */
+  text-overflow: ellipsis; /* Display ellipsis (...) for any overflowing text */
+  background: linear-gradient(to right, cyan, purple); /* Apply linear gradient to the text */
+  -webkit-background-clip: text; /* Apply the gradient only to the text */
+  background-clip: text; /* Apply the gradient only to the text */
+  color: transparent; /* Make the text transparent */
 }
 
 /* Media Queries */
@@ -264,27 +280,27 @@ img:hover {
 }
 
 .icons {
-    display: flex;
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-    margin-top: 20px;
-    position: absolute;
-    bottom: 10rem; /* Adjust positioning as needed */
-    left: 50%; /* Adjust positioning as needed */
-    transform: translateX(-50%); /* Center the icons horizontally */
-    border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vw; /* Adjust margin using viewport width */
+  position: absolute; /* Set position to absolute */
+  top: 75%; /* Position the icons under the h1 */
+  left: 50%; /* Center the icons horizontally */
+  transform: translateX(-50%); /* Center the icons horizontally */
 }
 
 .icons i {
-    font-size: 2.82rem;
-    color: purple; /* Adjust the color as needed */
-    border-radius: 50%;
+  font-size: 4vw; /* Adjust icon size using viewport width */
+  color: purple;
+  margin: 0 0.5vw; /* Adjust margin for spacing between icons using viewport width */
 }
 
 .icons i:hover {
-    transform: scale(1.1); /* Expand the icon size by 10% */
-    box-shadow: 0 0 20px 5px rgba(128, 0, 128, 0.7); /* Purple glowing effect */
+  transform: scale(1.1); /* Expand the icon size by 10% */
+  box-shadow: 0 0 2vw 0.5vw rgba(128, 0, 128, 0.7); /* Purple glowing effect using viewport width */
 }
+
 
 /* Media Queries */
 @media only screen and (max-width: 767px) {
@@ -1104,6 +1120,7 @@ hr {
   overflow: auto;
   border:none;
   padding: 10px;
+  background-color: #ffffff;
 }
 #send{ 
   width:   580px;
