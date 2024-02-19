@@ -157,7 +157,7 @@ section {
 }
 
 #home {
-  background-color: var(--background-color); /* Adjust the path to your image */
+  background-color: rgb(2, 0, 19); /* Adjust the path to your image */
   background-size: cover;
   background-position: center;
   color: cyan;
@@ -223,6 +223,7 @@ img:hover {
 .purple-text {
   color: purple; /* Purple color for the text */
   font-weight: bold; /* Make the text bold */
+  text-shadow: 0 0 50px rgba(128,0,128,1.2); /* Purple glowing effect */
 }
 
 /* Adjustments for smaller screens */
