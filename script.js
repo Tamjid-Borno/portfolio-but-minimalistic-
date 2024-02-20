@@ -165,3 +165,26 @@ $(document).ready(function(){
   })
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  // Get the "Home" link from the navigation bar
+  const homeLink = document.querySelector('a[href="#home"]');
+
+  // Get the image element
+  const image = document.getElementById('animated-image');
+
+  // Add event listener to the "Home" link
+  homeLink.addEventListener('click', function(event) {
+      // Prevent the default link behavior
+      event.preventDefault();
+
+      // Add animation class when the "Home" link is clicked
+      image.style.animation = 'slideInFromRight 1s ease';
+
+      // Remove the animation class after the animation ends
+      image.addEventListener('animationend', function() {
+          image.style.animation = '';
+      }, { once: true }); // Ensure the event listener is executed only once
+  });
+});
+
+
